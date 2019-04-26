@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(
+        https://fonts.googleapis.com/css?family=Droid+Serif:400,
+        700,
+        400italic
+      );
+      @import url(
+        https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,
+        700,
+        400italic
+      );
+
+      body {
+        font-family: "Droid Serif";
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Yanone Kaffeesatz";
+        font-weight: normal;
+      }
+      .remark-code,
+      .remark-inline-code {
+        font-family: "Ubuntu Mono";
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Benefits of functional programing at letgo
+
+---
+
+class: center, middle
+
+# What is Functional Programming
+
+## Programming with (mathematical) functions.
+
+---
+
+class: center, middle
+
+# Functions are pure. No side effects.
+
+---
+
+class: middle
+
+Pure function:
+
+```scala
+def sumNumbers(firstNumber: Int, secondNumber: Int): Int = {
+    firstNumber + secondNumber
+}
+```
+
+IMpure function:
+
+```scala
+def sumNumbers(firstNumber: Int, secondNumber: Int): Int = {
+    println("Hello! I'm a side effect :)")
+    firstNumber + secondNumber
+}
+```
+
+---
+
+class: center, middle
+
+# Functions are deterministic. 
+
+### Same output for the same input.
+
+---
+
+class: middle
+
+Deterministic function:
+
+```scala
+def sumNumbers(firstNumber: Int, secondNumber: Int): Int = {
+    firstNumber + secondNumber
+}
+
+sumNumbers(1, 2) // 3
+sumNumbers(1, 2) // 3
+sumNumbers(1, 2) // 3
+```
+
+NONdeterministic function:
+
+```scala
+def sumNumbersNonDeterministic(firstNumber: Int, secondNumber: Int): Int = {
+    firstNumber + secondNumber + randomNumber()
+}
+
+sumNumbersNonDeterministic(1, 2)  // 4
+sumNumbersNonDeterministic(1, 2)  // 5
+sumNumbersNonDeterministic(1, 2)  // 10
+```
+
+---
+
+class: center, middle
+
+# Functions are total. 
+
+### They always return something.
+
+---
+
+class: middle
+
+Total function:
+
+```scala
+def sumNumbers(firstNumber: Int, secondNumber: Int): Int = {
+    firstNumber + secondNumber
+}
+
+sumNumbers(1, 2) // 3
+sumNumbers(2, 3) // 5
+sumNumbers(4, 5) // 9
+```
+
+NONdeterministic function:
+
+```scala
+def sumNumbersFailingAt4(firstNumber: Int, secondNumber: Int): Int = {
+    if (firstNumber == 4) {
+        throw Exception("I'm non-deterministic!!!!!")
+    } else {
+        firstNumber + secondNumber
+    }
+}
+
+sumNumbersFailingAt4(1, 2) // 3
+sumNumbersFailingAt4(2, 3) // 5
+sumNumbersFailingAt4(4, 5) // Exception!!!!!!!!!
+```
+
+---
+
+class: center, middle
+
+# Enough theory! 
+
+## What do we win in a real project?
+
+---
+
+class: center, middle
+
+# Immutability
+
+## Immutable data collections = safer code
+
+---
+
+class: center, middle
+
+# No null values
+
+.right[![Right-aligned image](https://www.azquotes.com/picture-quotes/quote-i-call-it-my-billion-dollar-mistake-it-was-the-invention-of-the-null-reference-in-1965-tony-hoare-113-96-46.jpg)]
+
+---
+
+class: middle
+
+# With nulls
+
+```scala
+class UserRepository {
+    def search(id: UserId): User
+}
+```
+
+---
+
+class: middle
+
+# WithOUT nulls
+
+```scala
+class UserRepository {
+    def search(id: UserId): Option[User]
+}
+```
+
+---
+
+class: center, middle
+
+# Lazy evaluation
+
+---
+
+class: center, middle
+
+# Referential transparency
+
+## Everything is a value so we can substitute function calls by their evaluation
+
+---
+
+class: center, middle
+
+# Type-based reasoning
+
+## Knowing what a function does by looking at the type
+
+---
+
+class: center, middle
+
+# Higher-kinded types
+
+## We can have logic generic on the effect types
+
+---
+
+class: center, middle
+
+# Easier refactors
+## No fear on code changes
+
+---
+
+class: center, middle
+
+# Easier abstractions
+## Everything composes better if you follow FP principles
+
+---
+
+class: center, middle
+
+# Easier reasoning
+## Reading code is easier because less stuff can change
+
+---
+
+class: center, middle
+
+# Maintanable code
+## No unexpected stuff happens
+
+---
+
+class: center, middle
+
+# Explicit behaviour
+## We write declarative code that is better suited for implementing business logic
+
+---
+
+class: center, middle
+
+# Local reasoning
+## Can know what happens in a single use case because it's isolated
+
+---
+
+class: center, middle
+
+# Thanks!
+# Any questions?
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
