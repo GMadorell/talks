@@ -1,0 +1,35 @@
+# deps
+node_modules/
+
+# slidev / vite build output
+dist/
+.slidev/
+.vite-inspect/
+.remote-assets/
+components.d.ts
+
+# exports (regenerate with `npm run export`)
+*-export.pdf
+*-export.pptx
+*-export/
+
+# env / local
+.env
+.env.*
+!.env.example
+*.local
+
+# logs
+npm-debug.log*
+*.log
+
+# editors / os
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# agent scratch
+.heist/
+.worktrees/
