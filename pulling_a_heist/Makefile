@@ -7,7 +7,7 @@ help:
 	@echo ""
 	@echo "  make present   Run the presentation (slidev dev server)"
 	@echo "  make build     Build static site into dist/ (gitignored)"
-	@echo "  make html      Build the committed static site into html/ (open via any static server)"
+	@echo "  make html      Build the committed static site into html/ (double-click html/index.html)"
 	@echo "  make pdf       Export slides to pulling-a-heist-export.pdf"
 	@echo ""
 	@echo "No target given → this help. Run 'make present' to start."

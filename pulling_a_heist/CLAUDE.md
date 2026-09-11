@@ -10,7 +10,7 @@ Slidev deck: `slides.md`, `style.css`, `components/`, `layouts/`. Content plan i
 - **No invented data.** Every number or chart must come from a checkable source (repo, GitHub API, heist docs) and state where + when on the slide or in notes. Hand-placed positions or made-up series are not allowed.
 - **Don't start the dev server.** The user runs `make present` (`npm run dev`, port 3030).
 - **PDF:** `make pdf` → `pulling-a-heist-export.pdf` (gitignored; needs `playwright-chromium` + its Chromium: `npx playwright-chromium install chromium`).
-- **HTML:** `make html` → `html/` (committed static site, relative base + `routerMode: hash`; slide URLs are `/#/<n>`). Regenerate it whenever slides or assets change, before committing.
+- **HTML:** `make html` → `html/` (committed; opens straight from disk). `vite.config.ts` inlines all JS/CSS into `index.html` (browsers block separate scripts/styles on `file://`); relative base + `routerMode: hash`, slide URLs are `/#/<n>`. Components taking an image path prop must resolve root-relative paths via `import.meta.env.BASE_URL` (see `Shot.vue`) — the build only rewrites paths inside markdown. Regenerate before committing.
 - **Space:** delete assets/components no slide uses; store photos/banners as JPEG sized to display (~1200px), keep screenshots with text as PNG.
 
 ## Verifying slides

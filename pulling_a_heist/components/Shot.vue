@@ -1,15 +1,24 @@
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   src: { type: String, required: true },
   alt: { type: String, default: '' },
   w: { type: Number, required: true }, // source pixel size, for the aspect ratio
   h: { type: Number, required: true },
 })
+
+// Root-relative paths ("/img/x.png") are only rewritten by the build inside
+// markdown, not in component props; resolve them against the base URL so the
+// relative-base html/ export also finds them when opened from disk.
+const url = computed(() =>
+  props.src.startsWith('/') ? import.meta.env.BASE_URL + props.src.slice(1) : props.src,
+)
 </script>
 
 <template>
   <div class="shot-box" :style="{ '--r': w / h }">
-    <img :src="src" :alt="alt" />
+    <img :src="url" :alt="alt" />
   </div>
 </template>
 
