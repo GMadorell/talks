@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --sw-bg: #f2f0ec;
+  --sw-bg-raised: #e8e5df;
+  --sw-ink: #141414;
+  --sw-ink-dim: #4a4a46;
+  --sw-accent: #d62828;
+  --sw-line: #141414;
+  --slidev-theme-primary: #d62828;
+}
+
+html, body {
+  background: var(--sw-bg);
+}
+
+.slidev-layout {
+  background: var(--sw-bg);
+  color: var(--sw-ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  padding: 3.2rem 3.6rem;
+  position: relative;
+}
+
+/* crop-mark corners on every slide */
+.slidev-layout::before,
+.slidev-layout::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 20;
+}
+.slidev-layout::before {
+  top: 20px; left: 20px;
+  border-left: 2px solid var(--sw-accent);
+  border-top: 2px solid var(--sw-accent);
+}
+.slidev-layout::after {
+  bottom: 20px; right: 20px;
+  border-right: 2px solid var(--sw-accent);
+  border-bottom: 2px solid var(--sw-accent);
+}
+
+.slidev-layout h1 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 3.4rem;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0 0 0.6rem;
+}
+.slidev-layout h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 2.1rem;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0 0 1rem;
+}
+.slidev-layout h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+.slidev-layout p {
+  color: var(--sw-ink-dim);
+  max-width: 62ch;
+}
+.slidev-layout strong { color: var(--sw-ink); }
+.slidev-layout a { color: var(--sw-accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+.slidev-layout ul, .slidev-layout ol {
+  padding-left: 1.2rem;
+}
+.slidev-layout li {
+  margin-bottom: 0.4rem;
+}
+.slidev-layout li::marker {
+  color: var(--sw-accent);
+}
+
+.slidev-layout code {
+  font-family: 'IBM Plex Mono', monospace;
+  background: var(--sw-bg-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+.slidev-layout pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ---- shared utility classes used across slides.md ---- */
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sw-accent);
+  margin-bottom: 0.9rem;
+}
+
+.rule {
+  height: 2px;
+  background: var(--sw-ink);
+  width: 48px;
+  margin: 1.1rem 0;
+  border: none;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.stat-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--sw-ink-dim);
+  border-top: 1px solid var(--sw-ink);
+  padding-top: 0.6rem;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.principle {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--sw-accent);
+  text-wrap: balance;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.7rem;
+  border: 1.5px solid var(--sw-ink);
+  color: var(--sw-ink);
+}
+
+.logo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+}
+.logo-chip img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+}

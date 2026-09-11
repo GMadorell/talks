@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" role="img" aria-label="The Heist &#8212; case file banner">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#1B3E5C"/>
+      <stop offset="70%" stop-color="#16324F"/>
+      <stop offset="100%" stop-color="#0B1D2E"/>
+    </radialGradient>
+    <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EFE9DD" stroke-width="1" opacity="0.06"/>
+    </pattern>
+    <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#EFE9DD" stroke-width="1.2" opacity="0.10"/>
+    </pattern>
+    <style>
+      .display { font-family: Rockwell, 'Roboto Slab', Georgia, 'Times New Roman', serif; font-weight: 800; }
+      .mono { font-family: 'Courier New', ui-monospace, Menlo, monospace; }
+      .label { font-family: Helvetica, Arial, sans-serif; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="500" fill="url(#vignette)"/>
+  <rect x="0" y="0" width="1200" height="500" fill="url(#gridMinor)"/>
+  <rect x="0" y="0" width="1200" height="500" fill="url(#gridMajor)"/>
+
+  <text x="600" y="300" class="display" font-family="Rockwell, 'Roboto Slab', Georgia, 'Times New Roman', serif" font-size="150" fill="#EFE9DD" opacity="0.045"
+        text-anchor="middle" transform="rotate(-20 600 300)">TOP SECRET</text>
+
+  <g stroke="#EFE9DD" opacity="0.5">
+    <path d="M 30 46 L 30 30 46 30" fill="none" stroke-width="2"/>
+    <path d="M 1154 30 L 1170 30 1170 46" fill="none" stroke-width="2"/>
+    <path d="M 30 454 L 30 470 46 470" fill="none" stroke-width="2"/>
+    <path d="M 1170 454 L 1170 470 1154 470" fill="none" stroke-width="2"/>
+  </g>
+
+  <g fill="none" stroke="#EFE9DD">
+    <circle cx="880" cy="190" r="160" stroke-width="3" opacity="0.9"/>
+    <circle cx="880" cy="190" r="118" stroke-width="1.4" opacity="0.45"/>
+    <circle cx="880" cy="190" r="34" stroke-width="2.5" opacity="0.9"/>
+    <line x1="880" y1="190" x2="880" y2="146" stroke-width="2.5" opacity="0.75"/>
+    <line x1="880" y1="190" x2="915" y2="215" stroke-width="2.5" opacity="0.75"/>
+    <g stroke-width="1.8" opacity="0.65">
+      <line x1="880" y1="150" x2="880" y2="140"/>
+      <line x1="880" y1="230" x2="880" y2="240"/>
+      <line x1="840" y1="190" x2="830" y2="190"/>
+      <line x1="920" y1="190" x2="930" y2="190"/>
+    </g>
+    <g fill="#EFE9DD" stroke="none" opacity="0.9">
+      <circle cx="1018" cy="190" r="8"/>
+      <circle cx="999.5" cy="259" r="8"/>
+      <circle cx="949" cy="309.5" r="8"/>
+      <circle cx="880" cy="328" r="8"/>
+      <circle cx="811" cy="309.5" r="8"/>
+      <circle cx="760.5" cy="259" r="8"/>
+      <circle cx="742" cy="190" r="8"/>
+      <circle cx="760.5" cy="121" r="8"/>
+      <circle cx="811" cy="70.5" r="8"/>
+      <circle cx="880" cy="52" r="8"/>
+      <circle cx="949" cy="70.5" r="8"/>
+      <circle cx="999.5" cy="121" r="8"/>
+    </g>
+  </g>
+
+  <g transform="rotate(-3 185 55)">
+    <rect x="70" y="36" width="230" height="38" fill="none" stroke="#8C2F2F" stroke-width="2" opacity="0.85"/>
+    <text x="185" y="60" class="mono label" font-family="'Courier New', ui-monospace, Menlo, monospace" font-size="12" font-weight="700" fill="#EFE9DD" text-anchor="middle" opacity="0.9" style="letter-spacing:1.2px">STRICTLY CONFIDENTIAL</text>
+  </g>
+
+  <text x="70" y="238" class="display" font-family="Rockwell, 'Roboto Slab', Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="6" fill="#8C2F2F" opacity="0.75">THE HEIST</text>
+  <text x="62" y="230" class="display" font-family="Rockwell, 'Roboto Slab', Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="6" fill="#EFE9DD">THE HEIST</text>
+
+  <text x="64" y="272" class="mono label" font-family="'Courier New', ui-monospace, Menlo, monospace" font-size="17" fill="#B8863B" letter-spacing="3">CASE FILE NO. 001 &#8212; AGENTIC DEV CREW</text>
+  <line x1="64" y1="284" x2="520" y2="284" stroke="#B8863B" stroke-width="1" opacity="0.6"/>
+
+  <g stroke="#EFE9DD" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4">
+    <line x1="145" y1="420" x2="258" y2="420"/>
+    <line x1="341" y1="420" x2="454" y2="420"/>
+    <line x1="537" y1="420" x2="650" y2="420"/>
+    <line x1="733" y1="420" x2="846" y2="420"/>
+    <line x1="929" y1="420" x2="1042" y2="420"/>
+  </g>
+  <g fill="#EFE9DD" opacity="0.4">
+    <polygon points="258,414 270,420 258,426"/>
+    <polygon points="454,414 466,420 454,426"/>
+    <polygon points="650,414 662,420 650,426"/>
+    <polygon points="846,414 858,420 846,426"/>
+    <polygon points="1042,414 1054,420 1042,426"/>
+  </g>
+
+  <g class="mono label" font-family="'Courier New', ui-monospace, Menlo, monospace" text-anchor="middle">
+    <g transform="rotate(-6 110 420)">
+      <circle cx="110" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="110" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="110" y="427" font-size="16" font-weight="700" fill="#EFE9DD">MM</text>
+    </g>
+    <text x="110" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">MASTERMIND</text>
+
+    <g transform="rotate(4 306 420)">
+      <circle cx="306" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="306" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="306" y="427" font-size="16" font-weight="700" fill="#EFE9DD">FE</text>
+    </g>
+    <text x="306" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">FENCE</text>
+
+    <g transform="rotate(-3 502 420)">
+      <circle cx="502" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="502" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="502" y="427" font-size="16" font-weight="700" fill="#EFE9DD">FO</text>
+    </g>
+    <text x="502" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">FORGER</text>
+
+    <g transform="rotate(7 698 420)">
+      <circle cx="698" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="698" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="698" y="427" font-size="16" font-weight="700" fill="#EFE9DD">WH</text>
+    </g>
+    <text x="698" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">WHEELMAN</text>
+
+    <g transform="rotate(-5 894 420)">
+      <circle cx="894" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="894" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="894" y="427" font-size="16" font-weight="700" fill="#EFE9DD">MU</text>
+    </g>
+    <text x="894" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">MUSCLE</text>
+
+    <g transform="rotate(3 1090 420)">
+      <circle cx="1090" cy="420" r="30" fill="none" stroke="#B8863B" stroke-width="2"/>
+      <circle cx="1090" cy="420" r="23" fill="none" stroke="#B8863B" stroke-width="1"/>
+      <text x="1090" y="427" font-size="16" font-weight="700" fill="#EFE9DD">CL</text>
+    </g>
+    <text x="1090" y="464" font-size="11" fill="#EFE9DD" opacity="0.8" letter-spacing="1">CLEANER</text>
+  </g>
+
+</svg>
